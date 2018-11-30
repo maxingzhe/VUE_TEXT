@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>网易严选，以严谨态度，为中国消费者甄选天下优品</title>
+    <!--在meta标签中设置viewport-fit=cover-->
+    <!--通过 viewport-fit 可以设置可视视窗的大小，它有三个属性值：
+
+      Auto：默认值。这个值不影响初始布局视窗，整个 Web 页面是可视的。
+
+      Contain：最初的布局视窗和视觉布局视窗被设置为最大的矩形。
+
+      Cover：初始布局视窗和视觉布局视窗被设置为设备物理屏幕的限定矩形。
+    -->
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no viewport-fit=cover">
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/iconfont/iconfont.css">
+    <!--页面title的文字图片,图片格式必须为ico-->
+    <link href="/static/image/favicon.ico" rel="SHORTCUT ICON" />
+    <!--hotcss可以在不同dpr中适配，必须写在所有js之前-->
+    <script src="/static/js/hotcss.js"></script>
+    <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+    <script>
+      if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+          FastClick.attach(document.body);
+        }, false);
+      }
+      if(!window.Promise) {
+        document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
