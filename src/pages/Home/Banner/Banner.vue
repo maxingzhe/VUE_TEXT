@@ -1,8 +1,8 @@
 <template>
-    <div class="swiper-container" v-if="Pic.length">
+    <div class="swiper-container" v-if="Pic.length" id="mazong">
       <div class="swiper-wrapper">
         <div class="swiper-slide" v-for="(item) in Pic">
-          <img class="img" :src="item.picUrl" alt="">
+          <img class="img" v-lazy="item.picUrl" alt="">
         </div>
       </div>
       <!-- 如果需要分页器 -->
@@ -23,14 +23,13 @@
         .then(res=>{
           if(res.code===0){
             this.Pic = res.data
-            console.log(this.Pic)
           }
         })
     },
     watch:{
       Pic(){
         this.$nextTick(()=>{
-          new Swiper('.swiper-container',{
+          new Swiper('#mazong',{
             loop:true,
             pagination: {
               el: '.swiper-pagination',

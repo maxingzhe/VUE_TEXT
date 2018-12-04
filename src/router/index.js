@@ -13,19 +13,31 @@ export default new VueRouter({
   routes:[
     {
       path:'/home',
-      component:Home
+      component:Home,
+      meta:{
+        showFoot:true
+      }
     },
     {
       path:'/classify',
-      component:Classify
+      component:Classify,
+      meta:{
+        showFoot:true
+      }
     },
     {
       path:'/distinguish',
-      component:Distinguish
+      component:Distinguish,
+      meta:{
+        showFoot:true
+      }
     },
     {
       path:'/shopcart',
-      component:ShopCart
+      component:ShopCart,
+      meta:{
+        showFoot:true
+      }
     },
     {
       path:'/personal',

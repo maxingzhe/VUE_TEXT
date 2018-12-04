@@ -30,7 +30,8 @@
     data(){
       return{
         navList:['推荐','居家','鞋包配饰','服饰','电器','洗护','饮食','餐厨','婴童','文体','特色区'],
-        currentIndex:0}
+        currentIndex:0
+      }
     },
     methods:{
       tap(index){

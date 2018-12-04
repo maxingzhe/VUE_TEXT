@@ -110,16 +110,47 @@
       </ul>
     </div>
     <Split/>
+    <!--新品发布-->
+    <newArrival/>
+    <Split/>
+    <!--人气-->
+    <popularity/>
+    <Split/>
+    <img class="imgs" src="../../common/images/move.jpg" alt="">
+    <Split/>
+    <sfit/>
+    <Split/>
+    <SDetails/>
+    <Split/>
+    <div class="footer">
+      <div class="go">
+        <a href="javascript:;">
+          <span class="one">下载APP</span>
+        </a>
+        <a href="javascript:;">
+          <span class="two">电脑版</span>
+        </a>
+      </div>
+      <div class="top">网易公司版权所有 © 1997-2018</div>
+      <div class="buttom">食品经营许可证：JY13301080111719</div>
+    </div>
   </div>
 </template>
-
 <script>
   import navList from './navList/navList.vue'
   import banner from './Banner/Banner.vue'
+  import newArrival from './newArrival/newArrival.vue'
+  import popularity from './popularity/popularity.vue'
+  import sfit from './sfit/sfit.vue'
+  import SDetails from './details/details.vue'
   export default {
     components:{
       navList,
-      banner
+      banner,
+      newArrival,
+      popularity,
+      sfit,
+      SDetails
     }
   }
 </script>
@@ -269,7 +300,7 @@
         float right
         .top
           width 100%
-          height 49%
+          height 50%
           background #FBE2D3
           position relative
           .one
@@ -293,7 +324,6 @@
           width 100%
           height 50%
           background #F9E9CF
-          margin-top px2rem(5)
           position relative
           .three
             position absolute
@@ -411,4 +441,30 @@
             position absolute
             top px2rem(60)
             left px2rem(140)
+    .imgs
+      display flex
+    .footer
+      width 100%
+      height px2rem(266)
+      background #333
+      box-sizing border-box
+      padding px2rem(50) px2rem(100)
+      .go
+        text-align: center
+        font-size px2rem(30)
+        .one,.two
+          margin-top px2rem(20)
+          border: 1px solid white
+        .one
+          margin-right px2rem(5)
+        .two
+          margin-left px2rem(5)
+      .top,.buttom
+        font-size px2rem(25)
+        color white
+        margin-top px2rem(25)
+      .top
+        margin-left px2rem(100)
+      .buttom
+        margin-left px2rem(60)
 </style>
